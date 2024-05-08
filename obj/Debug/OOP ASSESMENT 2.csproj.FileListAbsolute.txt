@@ -1,0 +1,7 @@
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\bin\Debug\OOP ASSESMENT 2.exe.config
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\bin\Debug\OOP ASSESMENT 2.exe
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\bin\Debug\OOP ASSESMENT 2.pdb
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\obj\Debug\OOP ASSESMENT 2.csproj.AssemblyReference.cache
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\obj\Debug\OOP ASSESMENT 2.csproj.CoreCompileInputs.cache
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\obj\Debug\OOP ASSESMENT 2.exe
+D:\C# scripts\OOP ASSESMENT 2\OOP ASSESMENT 2\obj\Debug\OOP ASSESMENT 2.pdb
