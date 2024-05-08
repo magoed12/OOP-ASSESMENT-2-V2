@@ -22,8 +22,22 @@ namespace OOP_ASSESMENT_2
             get { return Win; }
             set { Win = true; }
         }
-        public void SevensOutMain() 
+        private string username;
+        public string Username
         {
+            get { return Username; }
+            set { Username = value; }
+        }
+        private int turn;
+        public int Turn
+        {
+            get { return Turn; }
+            set { Turn = value; }
+        }
+        public int SevensOutMain(string User = "Player") 
+        {
+            turn = 0;
+            username = User;
             win = true;
             SevensOutLoop();
             Console.WriteLine("Do you want to keep rolling");
@@ -34,9 +48,12 @@ namespace OOP_ASSESMENT_2
                     SevensOutLoop();
                 }
             }
+            Console.WriteLine(username + " Lasted " + turn + " rounds");
+            return turn;
         }
-        public void SevensOutLoop()
+        private void SevensOutLoop()
         {
+            turn += 1;
             Die die1 = new Die();
             int temp1 = die1.Roll();
             Thread.Sleep(1);

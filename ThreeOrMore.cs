@@ -23,7 +23,7 @@ namespace OOP_ASSESMENT_2
             set { Win = false; }
         }
         private int globalcount;
-        public bool Globalcount
+        public int Globalcount
         {
             get { return Globalcount; }
             set { Globalcount = value; }
@@ -34,9 +34,23 @@ namespace OOP_ASSESMENT_2
             get { return TurnOver; }
             set { TurnOver = value; }
         }
-
-        public void ThreeOrMoreMain()
+        private string username;
+        public string Username
         {
+            get { return Username; }
+            set { Username = value; }
+        }
+        private int turn;
+        public int Turn
+        {
+            get { return Turn; }
+            set { Turn = value; }
+        }
+
+        public int ThreeOrMoreMain(string User = "Player")
+        {
+            turn = 0;
+            username = User;
             win = false;
             while (win == false)
             {
@@ -46,29 +60,35 @@ namespace OOP_ASSESMENT_2
                 ThreeOrMoreLoop();
                 Console.WriteLine("your score is " + total);
             }
-            Console.WriteLine("Win");
+            Console.WriteLine(Username + " reached 20 in " + turn + " turns");
+            return turn;
         }
         public void ThreeOrMoreLoop()
         {
-            Die die1 = new Die();
-            Die die2 = new Die();
-            Die die3 = new Die();
-            Die die4 = new Die();
-            Die die5 = new Die();
-            var Values = new List<int>();
-            Values.Add(die1.Roll());
-            Thread.Sleep(1);
-            Values.Add(die2.Roll());
-            Thread.Sleep(1);
-            Values.Add(die3.Roll());
-            Thread.Sleep(1);
-            Values.Add(die4.Roll());
-            Thread.Sleep(1);
-            Values.Add(die5.Roll());
-            LINQCheck(Values);
-
+            turn += 1;
+            Console.WriteLine("Press enter to roll");
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                Die die1 = new Die();
+                Die die2 = new Die();
+                Die die3 = new Die();
+                Die die4 = new Die();
+                Die die5 = new Die();
+                var Values = new List<int>();
+                Values.Add(die1.Roll());
+                Thread.Sleep(1);
+                Values.Add(die2.Roll());
+                Thread.Sleep(1);
+                Values.Add(die3.Roll());
+                Thread.Sleep(1);
+                Values.Add(die4.Roll());
+                Thread.Sleep(1);
+                Values.Add(die5.Roll());
+                LINQCheck(Values);
+            }
+            
         }
-        public void LINQCheck(List<int> Values, int Kind = 0)
+        private void LINQCheck(List<int> Values, int Kind = 0)
         {
             globalcount = 0;
             int temp = 0;
@@ -91,7 +111,7 @@ namespace OOP_ASSESMENT_2
             Console.WriteLine(globalcount + " of a kind of " + temp);
             ThreeOrMoreChoice(temp);
         }
-        public void ThreeOrMoreChoice(int temp)
+        private void ThreeOrMoreChoice(int temp)
         {
             if (globalcount < 2)
             {
@@ -134,7 +154,7 @@ namespace OOP_ASSESMENT_2
             }
             WinCheck();
         }
-        public void WinCheck()
+        private void WinCheck()
         {
             if (total >= 20)
             {

@@ -11,8 +11,92 @@ namespace OOP_ASSESMENT_2
     {
         static void Main(string[] args)
         {
-            ThreeOrMore threeOrMore = new ThreeOrMore();
-            threeOrMore.ThreeOrMoreMain();
+            ThreeOrMore threeOrMore1 = new ThreeOrMore();
+            SevensOut sevensOut1 = new SevensOut();
+            ThreeOrMore threeOrMore2 = new ThreeOrMore();
+            SevensOut sevensOut2 = new SevensOut();
+            Testing testing = new Testing();
+            Console.WriteLine("1: SinglePlayer Three Or More game \n2: SinglePlayer Sevens Out game \n3: Three or More game against the computer \n4: sevens out game against the computer \n5: 2 player three or more game \n6: 2 player sevens out game \n7: testing ");
+            string temp = Console.ReadLine();
+            int value1;
+            int value2;
+            string User1;
+            string User2;
+            switch (temp)
+            {
+                case "1":
+                    Console.WriteLine("Enter your username");
+                    threeOrMore1.ThreeOrMoreMain(Console.ReadLine());
+                    break;
+                case "2":
+                    Console.WriteLine("Enter your username");
+                    sevensOut2.SevensOutMain(Console.ReadLine());
+                    break;
+                case "3":
+                    Console.WriteLine("Enter your username");
+                    User1 = Console.ReadLine();
+                    value1 = threeOrMore1.ThreeOrMoreMain(User1);
+                    value2 = threeOrMore1.ThreeOrMoreMain("Computer Player");
+                    if (value1 > value2)
+                        Console.WriteLine(User1 + " won");
+                    if (value1 < value2)
+                        Console.WriteLine("Computer Player won");
+                    if (value1 == value2)
+                    {
+                        Console.WriteLine("draw");
+                    }
+                    break;
+                case "4":
+                    Console.WriteLine("Enter your username");
+                    User1 = Console.ReadLine();
+                    value1 = sevensOut1.SevensOutMain(User1);
+                    value2 = threeOrMore1.ThreeOrMoreMain("Computer Player");
+                    if (value1 > value2)
+                        Console.WriteLine(User1 + " won");
+                    if (value1 < value2)
+                        Console.WriteLine("Computer Player won");
+                    if (value1 == value2)
+                    {
+                        Console.WriteLine("draw");
+                    }
+                    break;
+                case "5":
+                    Console.WriteLine("Enter Player 1's username");
+                    User1 = Console.ReadLine();
+                    value1 = threeOrMore1.ThreeOrMoreMain(User1);
+                    Console.WriteLine("Enter Player 2's username");
+                    User2 = Console.ReadLine();
+                    value2 = threeOrMore2.ThreeOrMoreMain(User2);
+                    if (value1 > value2)
+                        Console.WriteLine(User1 + " won");
+                    if (value1 < value2)
+                        Console.WriteLine(User2 + "won");
+                    if (value1 == value2)
+                    {
+                        Console.WriteLine("draw");
+                    }
+                    break;
+                case "6":
+                    Console.WriteLine("Enter Player 1's username");
+                    User1 = Console.ReadLine();
+                    value1 = sevensOut1.SevensOutMain(User1);
+                    Console.WriteLine("Enter Player 2's username");
+                    User2 = Console.ReadLine();
+                    value2 = sevensOut2.SevensOutMain(User2);
+                    if (value1 > value2)
+                        Console.WriteLine(User1 + " won");
+                    if (value1 < value2)
+                        Console.WriteLine(User2 + "won");
+                    if (value1 == value2)
+                    {
+                        Console.WriteLine("draw");
+                    }
+                    break;
+                case "7":
+                    testing.Test();
+                    break;
+
+            }
         }
     }
 }
