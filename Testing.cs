@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP_ASSESMENT_2;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -19,6 +20,27 @@ namespace CMP1903_A1_2324
             Debug.Assert(values.Item2 < 7 && values.Item2 > 0, "A die roll is invalid");
             Debug.Assert(values.Item3 < 7 && values.Item3 > 0, "A die roll is invalid");
             Console.WriteLine("Testing is complete");
+            ThreeOrMore threeOrMore1 = new ThreeOrMore();
+            SevensOut sevensOut1 = new SevensOut();
+            var Values = new List<int>();
+            Console.WriteLine("enter what numbers you want to check (5) between 1 and 6 including 1 and 6 (other numbers are allowed as inputs to test)");// enter numbers that will be inputed into the games check system
+            for (int i = 0; i < 5; i++) 
+            {
+                try
+                {
+                    string temp = Console.ReadLine();
+                    Values.Add(Convert.ToInt32(temp));
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("invalid input");// if a letter is inputed it says "invalid input" and requests a new input
+                    i -= 1;
+                }
+            }
+            threeOrMore1.LINQCheck(Values);
+            Console.WriteLine("three or more complete");
+            sevensOut1.SevensOutLoop();
+            Console.WriteLine("sevens out complete");
         }
     }
 }
