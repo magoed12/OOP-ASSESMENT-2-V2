@@ -11,8 +11,8 @@ namespace OOP_ASSESMENT_2
     {
         static void Main(string[] args)
         {
-            SevensOut sevensOut = new SevensOut();
-            sevensOut.SevensOutMain();
+            ThreeOrMore threeOrMore = new ThreeOrMore();
+            threeOrMore.ThreeOrMoreMain();
         }
     }
 }
