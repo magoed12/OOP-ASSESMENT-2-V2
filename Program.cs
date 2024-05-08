@@ -50,7 +50,7 @@ namespace OOP_ASSESMENT_2
                     Console.WriteLine("Enter your username");
                     User1 = Console.ReadLine();
                     value1 = sevensOut1.SevensOutMain(User1);
-                    value2 = threeOrMore1.ThreeOrMoreMain("Computer Player");
+                    value2 = sevensOut2.SevensOutMain("Computer Player");
                     if (value1 > value2)
                         Console.WriteLine(User1 + " won");
                     if (value1 < value2)

@@ -47,10 +47,16 @@ namespace OOP_ASSESMENT_2
             set { Turn = value; }
         }
 
-        public int ThreeOrMoreMain(string User = "Player")
+        public int ThreeOrMoreMain(string User)
         {
-            turn = 0;
+            if (User == "")
+            {
+                User = "player";
+            }
             username = User;
+            Console.WriteLine(username + "'s turn");
+            total = 0;
+            turn = 0;
             win = false;
             while (win == false)
             {
@@ -60,7 +66,7 @@ namespace OOP_ASSESMENT_2
                 ThreeOrMoreLoop();
                 Console.WriteLine("your score is " + total);
             }
-            Console.WriteLine(Username + " reached 20 in " + turn + " turns");
+            Console.WriteLine(username + " reached 20 in " + turn + " turns");
             return turn;
         }
         public void ThreeOrMoreLoop()

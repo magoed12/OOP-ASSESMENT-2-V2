@@ -18,6 +18,7 @@ namespace CMP1903_A1_2324
             Debug.Assert(values.Item1 < 7 && values.Item1 > 0, "A die roll is invalid");
             Debug.Assert(values.Item2 < 7 && values.Item2 > 0, "A die roll is invalid");
             Debug.Assert(values.Item3 < 7 && values.Item3 > 0, "A die roll is invalid");
+            Console.WriteLine("Testing is complete");
         }
     }
 }

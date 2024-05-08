@@ -34,10 +34,15 @@ namespace OOP_ASSESMENT_2
             get { return Turn; }
             set { Turn = value; }
         }
-        public int SevensOutMain(string User = "Player") 
+        public int SevensOutMain(string User) 
         {
+            if (User == "")
+            {
+                User = "player";
+            }
             turn = 0;
             username = User;
+            Console.WriteLine(username + "'s turn");
             win = true;
             SevensOutLoop();
             Console.WriteLine("Do you want to keep rolling");
@@ -49,7 +54,7 @@ namespace OOP_ASSESMENT_2
                 }
             }
             Console.WriteLine(username + " Lasted " + turn + " rounds");
-            return turn;
+            return total;
         }
         private void SevensOutLoop()
         {
