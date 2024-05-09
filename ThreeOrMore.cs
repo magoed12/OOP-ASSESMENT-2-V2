@@ -65,7 +65,7 @@ namespace OOP_ASSESMENT_2
                 globalcount = 0;
                 turnover = false;
                 ThreeOrMoreLoop();
-                Console.WriteLine("your score is " + total);
+                
             }
             Console.WriteLine(username + " reached 20 in " + turn + " turns");
             return turn;
@@ -154,6 +154,7 @@ namespace OOP_ASSESMENT_2
             {
                 total += 12;
             }
+            Console.WriteLine("your score is " + total);
             WinCheck();
         }
         private void WinCheck()

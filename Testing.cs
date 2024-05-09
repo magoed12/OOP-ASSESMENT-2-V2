@@ -19,17 +19,16 @@ namespace CMP1903_A1_2324
             Debug.Assert(values.Item1 < 7 && values.Item1 > 0, "A die roll is invalid");
             Debug.Assert(values.Item2 < 7 && values.Item2 > 0, "A die roll is invalid");
             Debug.Assert(values.Item3 < 7 && values.Item3 > 0, "A die roll is invalid");
-            Console.WriteLine("Testing is complete");
             ThreeOrMore threeOrMore1 = new ThreeOrMore();
             SevensOut sevensOut1 = new SevensOut();
-            var Values = new List<int>();
+            var Values1 = new List<int>();
             Console.WriteLine("enter what numbers you want to check (5) between 1 and 6 including 1 and 6 (other numbers are allowed as inputs to test)");// enter numbers that will be inputed into the games check system
             for (int i = 0; i < 5; i++) 
             {
                 try
                 {
                     string temp = Console.ReadLine();
-                    Values.Add(Convert.ToInt32(temp));
+                    Values1.Add(Convert.ToInt32(temp));
                 }
                 catch (FormatException)
                 {
@@ -37,9 +36,23 @@ namespace CMP1903_A1_2324
                     i -= 1;
                 }
             }
-            threeOrMore1.LINQCheck(Values);
+            threeOrMore1.LINQCheck(Values1);
             Console.WriteLine("three or more complete");
-            sevensOut1.SevensOutLoop();
+            Console.WriteLine("enter 2 die");
+            for (int i = 0; i < 2; i++)
+            {
+                try
+                {
+                    string temp2 = Console.ReadLine();
+                    string temp3 = Console.ReadLine();
+                    sevensOut1.SevensOutLoop(Convert.ToInt32(temp2),Convert.ToInt32(temp3),true);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("invalid input");// if a letter is inputed it says "invalid input" and requests a new input
+                    i -= 1;
+                }
+            }
             Console.WriteLine("sevens out complete");
         }
     }

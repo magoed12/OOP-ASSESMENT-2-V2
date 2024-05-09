@@ -56,7 +56,7 @@ namespace OOP_ASSESMENT_2
             Console.WriteLine(username + " Lasted " + turn + " rounds");
             return total;
         }
-        public void SevensOutLoop()
+        public void SevensOutLoop(int val1 = 0,int val2 = 0, bool Test = false)
         {
             turn += 1;
             Die die1 = new Die();
@@ -64,6 +64,11 @@ namespace OOP_ASSESMENT_2
             Thread.Sleep(1);
             Die die2 = new Die();
             int temp2 = die1.Roll();
+            if (Test)
+            {
+                temp1 = val1;
+                temp2 = val2;
+            }
             if ((temp1 + temp2) == 7)
             {
                 Console.WriteLine("You rolled a 7 game over");// if a 7 is rolled set win to true to end the game
@@ -81,6 +86,7 @@ namespace OOP_ASSESMENT_2
                 
                 total += temp1 + temp2;
             }
+
             Console.WriteLine("Current total is " + total);
         }
     }

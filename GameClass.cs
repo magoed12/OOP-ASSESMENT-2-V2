@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOP_ASSESMENT_2
 {
-    internal class GameClass
+    abstract internal class GameClass
     {
         public Die die1 = new Die();
         public Die die2 = new Die();
