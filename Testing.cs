@@ -39,7 +39,7 @@ namespace CMP1903_A1_2324
             threeOrMore1.LINQCheck(Values1);
             Console.WriteLine("three or more complete");
             Console.WriteLine("enter 2 die");
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++)// only 2 numbers for this part 
             {
                 try
                 {

@@ -11,37 +11,37 @@ namespace OOP_ASSESMENT_2
     internal class ThreeOrMore : GameClass
     {
 
-            private int total;
+            private int total;// total score of the player 
             public int Total
             {
                 get { return Total; }
                 set { Total = 0; }
             }
-            private bool win;
+            private bool win;// if true player has won the game
             public bool Win
             {
                 get { return Win; }
                 set { Win = false; }
             }
-            private int globalcount;
+            private int globalcount;// temp value that is needed globably and used to check for multiple of a kind
             public int Globalcount
             {
                 get { return Globalcount; }
                 set { Globalcount = value; }
             }
-            private bool turnover;
+            private bool turnover;// stops repeating turns if player rolls a 2 then rolls another 2 and another etc
             public bool TurnOver
             {
                 get { return TurnOver; }
                 set { TurnOver = value; }
             }
-            private string username;
+            private string username;// players username
             public string Username
             {
                 get { return Username; }
                 set { Username = value; }
             }
-            private int turn;
+            private int turn;// counts number of turns
             public int Turn
             {
                 get { return Turn; }

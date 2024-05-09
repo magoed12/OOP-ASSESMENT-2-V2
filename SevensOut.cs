@@ -23,12 +23,12 @@ namespace OOP_ASSESMENT_2
             set { turn = value; }
         }
         private bool win;
-        public bool Win
+        public bool Win// if true the player has won the game
         {
             get { return win; }
             set { win = value; }
         }
-        private int total;// turncount to count the number of goes that have occured
+        private int total;// total score of the player
         public int Total
         {
             get { return total; }
